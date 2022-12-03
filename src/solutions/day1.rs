@@ -34,13 +34,11 @@ fn sort3(triplet: &mut (u32, u32, u32)) {
         } else {
             (triplet.2, triplet.0, triplet.1)
         }
+    } else if triplet.0 <= triplet.2 {
+        (triplet.1, triplet.0, triplet.2)
+    } else if triplet.1 <= triplet.2 {
+        (triplet.1, triplet.2, triplet.0)
     } else {
-        if triplet.0 <= triplet.2 {
-            (triplet.1, triplet.0, triplet.2)
-        } else if triplet.1 <= triplet.2 {
-            (triplet.1, triplet.2, triplet.0)
-        } else {
-            (triplet.2, triplet.1, triplet.0)
-        }
+        (triplet.2, triplet.1, triplet.0)
     }
 }

@@ -8,4 +8,3 @@ pub fn load_input<P: AsRef<Path>>(path: P) -> io::Result<String> {
     file.read_to_string(&mut buffer)?;
     Ok(buffer)
 }
-
