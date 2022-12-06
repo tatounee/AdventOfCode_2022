@@ -36,10 +36,3 @@ fn items_to_u128(string: &str) -> u128 {
 
     output
 }
-
-#[test]
-fn convertion_str_to_u128() {
-    let s = "ZaczA";
-    let u = items_to_u128(s);
-    assert_eq!(u, 0b1000000000000000000000000110000000000000000000000101)
-}
