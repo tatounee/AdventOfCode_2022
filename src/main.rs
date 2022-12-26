@@ -1,3 +1,5 @@
+#![feature(iter_array_chunks)] // day 3
+#![feature(array_windows)] // day 6
 #![allow(dead_code)]
 
 mod solutions;
