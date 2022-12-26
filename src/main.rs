@@ -1,5 +1,6 @@
 #![feature(iter_array_chunks)] // day 3
 #![feature(array_windows)] // day 6
+#![feature(iter_intersperse)] // day 10
 #![allow(dead_code)]
 
 mod solutions;
