@@ -41,19 +41,15 @@ pub fn part2(input: &str) -> u32 {
 
     let distances = bfs(graphe, goal);
 
-    let potential_starts = input
-        .lines()
-        .enumerate()
-        .map(|(y, row)| {
-            row.chars().enumerate().filter_map(move |(x, c)| {
-                if c == 'a' || c == 'S' {
-                    Some((x, y))
-                } else {
-                    None
-                }
-            })
+    let potential_starts = input.lines().enumerate().flat_map(|(y, row)| {
+        row.chars().enumerate().filter_map(move |(x, c)| {
+            if c == 'a' || c == 'S' {
+                Some((x, y))
+            } else {
+                None
+            }
         })
-        .flatten();
+    });
 
     // for line in distances.iter() {
     //     for h in line {
@@ -99,7 +95,7 @@ fn bfs(graphe: Graphe, start: Coords) -> Vec<Vec<Option<u32>>> {
 
         for neighbour in graphe.neighbour(cell) {
             if neighbour != start
-                && distances[neighbour.1][neighbour.0] == None
+                && distances[neighbour.1][neighbour.0].is_none()
                 && !to_visit.contains(&neighbour)
             {
                 to_visit.push_front(neighbour)

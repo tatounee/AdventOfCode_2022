@@ -185,7 +185,7 @@ impl FromStr for Variable {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             "old" => Ok(Old),
-            s => s.parse().map(|n| Number(n)).map_err(|_| ()),
+            s => s.parse().map(Number).map_err(|_| ()),
         }
     }
 }
