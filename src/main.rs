@@ -1,5 +1,5 @@
 #![feature(iter_array_chunks)] // day 3
-#![feature(array_windows)] // day 6
+#![feature(array_windows)] // day 6 + day 14
 #![feature(iter_intersperse)] // day 10
 #![feature(let_chains)] // day 13
 #![allow(dead_code)]
