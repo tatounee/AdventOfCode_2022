@@ -12,6 +12,6 @@ use utils::load_input;
 
 fn main() {
     let input = load_input("input.txt").unwrap();
-    let solution = day15::part2(&input);
-    println!("Day {} - Part {} : {}", 15, 2, solution);
+    let solution = day19::part1(&input);
+    println!("Day {} - Part {} : {}", 19, 1, solution);
 }
